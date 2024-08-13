@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Encrypter Challenge</title>
+  </head>
+  <body>
+    <main class="container">
+      <img class="logo_image" src="./assets/Logo.png" alt="Alura Logo Image" />
+      <div class="mid_content">
+        <textarea
+          class="text_box"
+          id="message_text"
+          placeholder="Write your message"
+        ></textarea>
+        <p class="info_paragraph">
+          <img class="info_icon" src="./assets/informacion.png" />
+          Only lowercase letters and without accent
+        </p>
+        <div class="mid_content_buttons">
+          <button
+            class="primary_button"
+            id="encrypt"
+            onclick="encryptTextButton()"
+          >
+            Encrypt
+          </button>
+          <button class="secondary_button" onclick="decryptTextButton()">
+            Decrypt
+          </button>
+        </div>
+      </div>
+      <div
+        class="end_content"
+        id="third_element"
+        style="justify-content: center"
+      >
+        <button
+          class="copy_button"
+          id="copy"
+          onclick="copyToClipboard()"
+          style="display: none"
+        >
+          Copy
+        </button>
+        <div
+          class="message_container"
+          id="message_content"
+          style="display: flex"
+        >
+          <p class="text_not_found">Message not found!</p>
+          <p class="suggestion_text">
+            Input the text that you want to encrypt or decrypt
+          </p>
+        </div>
+        <img
+          class="start_image"
+          id="image"
+          src="./assets/Muñeco.png"
+          style="display: flex"
+        />
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer_paragraph">Created by Jhon Lopez. All rights reserved</p>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
